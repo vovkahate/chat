@@ -161,3 +161,9 @@ img {
     border-radius: 50%;
     margin: 2px 5px;
 }
+
+p.time {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+}

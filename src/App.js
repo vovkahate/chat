@@ -90,7 +90,7 @@ function ChatRoom() {
 }
 
 function ChatMessage(props) {
-    const { text, uid, photoURL } = props.message;
+    const { text, uid, photoURL, createdAt } = props.message;
 
     const messageClass = uid === auth.currentUser.uid ? "sent" : "received";
 
@@ -98,6 +98,7 @@ function ChatMessage(props) {
         <div className={`message ${messageClass}`}>
             <img src={photoURL} alt="pic" />
             <p>{text}</p>
+            <p className="time">{createdAt?.toDate().toLocaleString()}</p>
         </div>
     );
 }
